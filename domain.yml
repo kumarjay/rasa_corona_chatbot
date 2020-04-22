@@ -1,0 +1,115 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- name_entity
+- country
+- form_entity
+- query_knowledge_base
+- district_entity
+- email_entity
+- district_info_entity
+- state_entity
+- worldwide_corona_spread
+entities:
+- name
+- country
+- county
+- object_type
+- mention
+- attribute
+- state
+- restaurant
+- cuisine
+- city
+- email
+- district
+- attibute
+slots:
+  attribute:
+    type: unfeaturized
+  city:
+    type: unfeaturized
+  country:
+    type: unfeaturized
+  cuisine:
+    type: unfeaturized
+  district:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  hotel:
+    type: unfeaturized
+  mention:
+    type: unfeaturized
+  name:
+    type: unfeaturized
+  object_type:
+    type: unfeaturized
+  restaurant:
+    type: unfeaturized
+  state:
+    type: unfeaturized
+responses:
+  utter_greet:
+  - text: Hey! How are you? Please enter your name..
+  utter_cheer_up:
+  - text: Here is map [ ]{link}
+    image: '{link}'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_name:
+  - text: Please enter your name...
+  utter_ask_country:
+  - text: Please enter your Country name
+  utter_ask_district:
+  - text: please enter your district
+  utter_ask_state:
+  - text: 'please enter state code (ex- Bihar: BR)'
+  utter_ask_email:
+  - text: please enter your email id
+  utter_submit:
+  - text: All done...here is your data... {info}
+  utter_submit2:
+  - text: All done...here is your data... {info}
+  utter_show_name:
+  - text: Your name is {name} and country name is {country} your district is {district}
+  - text: your email id is {email}
+  utter_ask_rephrase:
+  - text: Sorry, I'm not sure I understand. Can you rephrase?
+  - text: Can you please rephrase? I did not got that.
+actions:
+- action_link
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ask_name
+- utter_ask_country
+- utter_submit
+- utter_show_name
+- action_query_knowledge_base
+- utter_ask_district
+- utter_ask_email
+- utter_ask_rephrase
+- utter_ask_state
+- utter_submit2
+- worldwide_corona_spread
+forms:
+- action_form
+- action_state
